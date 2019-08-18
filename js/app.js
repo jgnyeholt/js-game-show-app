@@ -159,6 +159,5 @@ function addTries(){
   missed = 0;
   for(let i = 0; i < tries.length; i++){
       tries[i].style.opacity = 1;
-      tries[i].style.transition = "1s";
   }
 }
