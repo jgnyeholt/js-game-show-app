@@ -77,15 +77,22 @@ button {
 
 /* Phrase */
 
-.letter {
+.letter,
+.space {
   font-size: var(--font-size-medium);
   height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
-  margin-right: 2px;
+  margin-right: 5px;
+  margin-top: 5px;
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.space{
+  background-color: white;
 }
 
 .space {
@@ -95,6 +102,7 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
+  transition: .3s
 }
 
 /* Keyboard */
@@ -117,6 +125,7 @@ button {
   background: #FFFFFF;
   border-radius: 5px;
   font-size: var(--font-size-medium);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .btn__reset:hover{
@@ -126,7 +135,6 @@ button {
 /* Overlay */
 
 #overlay {
-  display: flex;
   flex-direction: column;
   position: fixed;
   color: #FFFFFF;
@@ -138,6 +146,15 @@ button {
   border-radius: 5px;
 }
 
+.display-none {
+  display:none;
+}
+
+.display-flex{
+  display: flex;
+  animation: fade-in 1.5s;
+}
+
 .title {
   color: #FFF;
 }
@@ -147,15 +164,18 @@ button {
 }
 
 .start a {
-  color: var(--color-win);
+  color: var(--color-start);
 }
 
 .win {
   background-color: var(--color-win);
+
 }
+
 
 .win a {
   color: var(--color-win);
+
 }
 
 .lose {
@@ -164,4 +184,13 @@ button {
 
 .lose a {
   color: var(--color-lose);
+}
+
+@keyframes fade-in {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
